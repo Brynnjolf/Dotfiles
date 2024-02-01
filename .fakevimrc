@@ -1,0 +1,36 @@
+set number
+set relativenumber
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+set smartindent
+
+set nohlsearch
+set incsearch
+set ignorecase
+
+
+set splitright
+
+set scrolloff=8
+
+vnoremap <S-J> :m '>+1<CR>gv=gv
+vnoremap <S-K> :m '<-2<CR>gv=gv
+nnoremap <S-Q> @qj
+vnoremap <S-Q> :normal @q<CR>
+
+nnoremap <leader>r :run<CR>
+nnoremap <leader>db :debug<CR>
+nnoremap <leader>s :switchHeaderSource<CR>
+nnoremap <leader>q :quickfix<CR>
+nnoremap <leader>br :breakpoint<CR>
+nnoremap gd :FollowSymbol<CR>
+nnoremap <C-H> 'H
+nnoremap <C-J> 'J
+nnoremap <C-L> 'L
+
+unmap <C-P>
+
+command! -bar -bang -nargs=* W w<bang> <args>
